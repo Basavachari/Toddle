@@ -1,23 +1,6 @@
 // swagger.js
 const swaggerJsDoc = require('swagger-jsdoc');
 
-// const options = {
-//   definition: {
-//     openapi: '3.0.0',
-//     info: {
-//       title: 'Your API Documentation',
-//       version: '1.0.0',
-//     },
-//     servers:[
-//         {
-//             url :"http://localhost:3000/"
-//         }
-//     ]
-    
-//   },
-  
-//   apis: ['index.js'], // Replace with your actual path to route files
-// };
 
 
 const options = {
@@ -30,7 +13,7 @@ const options = {
       },
       servers: [
         {
-          url: 'http://localhost:3000', // Change this to your server URL
+          url: 'https://toddle-backend-52ya.onrender.com', // Change this to your server URL
           description: 'Development server',
         },
         // You can add more server URLs for different environments
