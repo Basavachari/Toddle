@@ -4,6 +4,8 @@ const db = require('../db/queries'); // Import your query functions
 const authenticateToken = require('../middleware/authenticateToken'); // Import the middleware
 
 // Create a new journal entry and tag students
+
+
 router.post('/create', authenticateToken, async (req, res) => {
   try {
     const { description, studentUsernames } = req.body;
@@ -34,7 +36,7 @@ router.post('/create', authenticateToken, async (req, res) => {
 
 
 // Update a journal entry and its tags
-router.put('/update/:id', authenticateToken, async (req, res) => {
+router.post('/update/:id', authenticateToken, async (req, res) => {
   try {
     const { id } = req.params;
     const { description, studentUsernames } = req.body;
@@ -100,7 +102,7 @@ router.delete('/delete/:id', authenticateToken, async (req, res) => {
 
 // publish the journal
 
-router.patch('/publish/:id', authenticateToken, async (req, res) => {
+router.post('/publish/:id', authenticateToken, async (req, res) => {
   try {
     const { id } = req.params;
     const { publish_date } = req.body;
